@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_gosample_1689687839367-pr-trigger-input-set
+  identifier: Build_gosample_1689687839367prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: water
+  pipeline:
+    identifier: Build_gosample_1689687839367
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
