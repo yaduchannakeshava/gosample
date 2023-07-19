@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_gosample_1689743308788-push-trigger-input-set
+  identifier: Build_gosample_1689743308788pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: iphone
+  pipeline:
+    identifier: Build_gosample_1689743308788
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
