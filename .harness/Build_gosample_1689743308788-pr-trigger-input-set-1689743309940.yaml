@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_gosample_1689743308788-pr-trigger-input-set
+  identifier: Build_gosample_1689743308788prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: iphone
+  pipeline:
+    identifier: Build_gosample_1689743308788
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>

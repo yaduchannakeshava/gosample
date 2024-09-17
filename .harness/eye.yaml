@@ -1,0 +1,39 @@
+pipeline:
+  name: eye
+  identifier: eye
+  projectIdentifier: default_project
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: yadugit
+        repoName: gosample
+        build: <+input>
+  stages:
+    - stage:
+        name: build-test
+        identifier: buildtest
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: BuildAndPushECR
+                  name: BuildAndPushECR_1
+                  identifier: BuildAndPushECR_1
+                  spec:
+                    connectorRef: awscon
+                    region: ap-south-1
+                    account: "506379294322"
+                    imageName: test
+                    tags:
+                      - test1
